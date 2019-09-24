@@ -49,9 +49,28 @@ const findProducts = (N,X) => {
   return count
 }
 
+//let testTable = makeTable(5)
+//console.log(testTable)
+
 const makeHTMLTable = (yourMatrix) => {
-  let output = ''
-  
+  let output = '<table class="table table-bordered table-dark">\n<thead>'
+  for ( x = 0; x < yourMatrix.length; x++ ) {
+    output = output+'<th scope="col">' + yourMatrix[0][x] + '</th>\n'
+  }
+  output = output + '</tr>\n</thead>\n<tbody>'
+  for (y = 1; y < yourMatrix.length; y++ ) {
+    output = output + '<tr>\n'
+    for ( x = 0; x < yourMatrix.length; x++ ) {
+      if ( x == 0 ) {
+        output = output + '<th scope="row">'+ yourMatrix[y][x] + '</th>\n'
+      } else {
+        output = output + '<th>'+ yourMatrix[y][x] + '</th>\n'
+      }
+    }
+    output = output + '</tr>\n'
+  }
+  output = output + '</tbody>'
+  return output
 }
 
 $(document).ready(function() {
@@ -63,5 +82,8 @@ $(document).ready(function() {
     //console.log('what is X?', X)
     let findProd = findProducts(N,X)
     $('#output-1').text(findProd)
+    let newTable = makeHTMLTable(makeTable(N))
+    //console.log(newTable)
+    $('#output-2').html(newTable)
   })
 });
