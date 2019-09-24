@@ -1,5 +1,5 @@
 /*
- This problem was asked by Apple.
+This problem was asked by Apple.
 
 Suppose you have a multiplication table that is N by N. That is, a 2D array where the value at the i-th row and j-th column is (i + 1) * (j + 1) (if 0-indexed) or i * j (if 1-indexed).
 
@@ -35,12 +35,33 @@ const makeTable = n => {
   return output
 }
 
-$(document).ready(function() {
+const findProducts = (N,X) => {
+  let multTable = makeTable(N)
+  //console.table(multTable)
+  let count = 0
+  for ( ey = 0; ey < multTable.length; ey++ ) {
+    for ( ex = 0; ex < multTable.length; ex++ ) {
+      if (multTable[ey][ex] == X) {
+        count++
+      }
+    }
+  }
+  return count
+}
 
+const makeHTMLTable = (yourMatrix) => {
+  let output = ''
+  
+}
+
+$(document).ready(function() {
   $('#form-1').submit(function(){
     event.preventDefault()
-    
-    $('#output-1').text(1)
+    let N = parseInt($('#input-1').val())
+    //console.log('what is N?', N)
+    let X = parseInt($('#input-2').val())
+    //console.log('what is X?', X)
+    let findProd = findProducts(N,X)
+    $('#output-1').text(findProd)
   })
-
 });
