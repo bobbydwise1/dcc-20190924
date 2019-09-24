@@ -11,6 +11,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daily Code Problem 2019-09-24</title>
+  <style>
+    tr {
+      text-align: center
+    }
+    th {
+      text-align: center
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -23,19 +31,62 @@
 
   <p>For example, given N = 6 and X = 12, you should return 4, since the multiplication table looks like this:</p>
 
-<pre> | 1 | 2 | 3 | 4 | 5 | 6 |</pre>
+  <table class="table table-bordered table-dark">
+    <thead>
+    <tr>
+      <th scope="col">1</th>
+      <th scope="col">2</th>
+      <th scope="col">3</th>
+      <th scope="col">4</th>
+      <th scope="col">5</th>
+      <th scope="col">6</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">2</th>
+      <th>4</th>
+      <th>6</th>
+      <th>8</th>
+      <th>10</th>
+      <th>12</th>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <th>6</th>
+      <th>9</th>
+      <th>12</th>
+      <th>15</th>
+      <th>18</th>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <th>8</th>
+      <th>12</th>
+      <th>16</th>
+      <th>20</th>
+      <th>24</th>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <th>10</th>
+      <th>15</th>
+      <th>20</th>
+      <th>25</th>
+      <th>30</th>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <th>12</th>
+      <th>18</th>
+      <th>24</th>
+      <th>30</th>
+      <th>36</th>
+    </tr>
+    </tbody>
+  </table> 
 
-<pre> | 2 | 4 | 6 | 8 | 10 | 12 |</pre>
-
-<pre> | 3 | 6 | 9 | 12 | 15 | 18 |</pre>
-
-<pre> | 4 | 8 | 12 | 16 | 20 | 24 |</pre>
-
-<pre> | 5 | 10 | 15 | 20 | 25 | 30 |</pre>
-
-<pre> | 6 | 12 | 18 | 24 | 30 | 36 |</pre>
-
-<p>And there are 4 12's in the table.</p>
+  <p>And there are 4 12's in the table.</p>
 
   <h4><b>Answer:</b></h4>
     <div style='border: 2px solid black; margin: 10px; padding: 10px'>
