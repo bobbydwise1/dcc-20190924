@@ -37,7 +37,6 @@ const makeTable = n => {
 
 const findProducts = (N,X) => {
   let multTable = makeTable(N)
-  //console.table(multTable)
   let count = 0
   for ( ey = 0; ey < multTable.length; ey++ ) {
     for ( ex = 0; ex < multTable.length; ex++ ) {
@@ -48,9 +47,6 @@ const findProducts = (N,X) => {
   }
   return count
 }
-
-//let testTable = makeTable(5)
-//console.log(testTable)
 
 const makeHTMLTable = (yourMatrix) => {
   let output = '<table class="table table-bordered table-dark">\n<thead>'
@@ -77,13 +73,10 @@ $(document).ready(function() {
   $('#form-1').submit(function(){
     event.preventDefault()
     let N = parseInt($('#input-1').val())
-    //console.log('what is N?', N)
     let X = parseInt($('#input-2').val())
-    //console.log('what is X?', X)
     let findProd = findProducts(N,X)
     $('#output-1').text(findProd)
     let newTable = makeHTMLTable(makeTable(N))
-    //console.log(newTable)
     $('#output-2').html(newTable)
   })
 });
